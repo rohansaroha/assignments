@@ -1,12 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout";
-import "../assets/scss/styling.scss";
-import classes from "*.module.scss";
+import styles from "../assets/scss/styling.module.scss";
 
 const Landing = () => {
   return (
     <Layout>
-      <div className={classes.header}>
+      <div className={styles.header}>
             hello
       </div>
     </Layout>
