@@ -1,32 +1,57 @@
 @import "../styling.module";
+
 .custom-navbar {
   font-family: $font-family;
   &-brand {
     a {
-      color: #FFF;
+      color: #262626;
       font-weight: bold;
       font-size: 1.2rem;
+      text-decoration: none;
       &:hover {
-        text-decoration: none;
-        color: #FFF;
+        color: #2766cc;
       }
     }
   }
   &-item {
-    color: #FFF;
+    color: $button-color;
     a {
-      color: #FFF;
-      padding: 0 2rem;
+      color: $button-color;
+      padding: 0.5rem 2rem;
       font-size: 1.2rem;
+      text-decoration: none;
       &:hover {
-        text-decoration: none;
         color: #007bb6;
       }
     }
   }
 }
+.navbar-main{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 $padding-vertical;
+}
+.basket-button{
+  &-container{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  &-main,&-qty{
+    background-color: #daebff;
+    border-radius: 6px 0 0 6px;
+    padding: 0.5rem 0.8rem;
+  }
+  &-qty{
+    border-radius: 0 6px 6px 0;
+  }
+}
 
 @media screen and (max-width: 768px) {
+  .navbar-main{
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
   .custom-navbar {
     &-item {
       a {
@@ -36,6 +61,6 @@
     }
   }
   .navbar-collapse {
-    background-color: green;
+    background-color: $footer-background;
   }
 }

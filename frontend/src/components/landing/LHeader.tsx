@@ -11,7 +11,7 @@ const LHeader = () => {
     productDetailsData.map((data)=>{
       productDetails.push(
         <div key={data.id}>
-          <DoneIcon color={"primary"} fontSize={"small"}/>
+          <DoneIcon style={{ color: "green" }} fontSize={"small"}/>
           <span className={styles.pHeader}>{data.header}:</span>
           <span className={styles.sHeader}>{data.secondaryHeader}</span>
           <div className={styles.border}/>

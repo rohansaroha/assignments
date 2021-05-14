@@ -1,9 +1,9 @@
 $padding-vertical:7rem;
-$text-color:#262626;
-$font-family:lora;
+$text-color:#333333;
+$font-family:Muli;
 $buttonHeight:1.6rem;
 $footer-background:#f4f2ed;
-$button-color: #2766cc;
+$button-color: #2654b4;
 
 @mixin fontStyle($size,$weight,$color){
   font-size: $size;

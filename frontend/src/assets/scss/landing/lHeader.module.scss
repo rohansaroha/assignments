@@ -1,10 +1,13 @@
 @import "../styling.module";
 
 .main{
+  margin-bottom: 11vh;
   background-color: #FDEDD3;
 }
 .content{
-  padding: 5rem $padding-vertical;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 7rem $padding-vertical;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -15,12 +18,13 @@
   margin-bottom: 0.7rem;
   span{
     @include fontStyle(3rem,500,#322f2a);
+    font-family: lora !important;
   }
 }
 
 .pHeader{
   margin: 0 0.5rem;
-  @include fontStyle(1rem,500,$text-color)
+  @include fontStyle(1rem,600,$text-color)
 }
 .sHeader{
   @include fontStyle(0.9rem,normal,$text-color)
@@ -29,6 +33,7 @@
   width: 58%;
   span{
     @include fontStyle(1.25rem,normal,#544f46);
+    font-family: lora !important;
   }
 }
 .border{
@@ -42,17 +47,18 @@
   background-color: #ffffff;
   border: solid 2px #EFECE6;
   border-radius: 8px;
-  height: 24rem;
-  width: 20rem;
+  height: 26rem;
+  width: 22rem;
 }
 .add{
-  margin: 1rem 0;
-  @include button(15rem,2rem,#276ccc,#fff,1.2rem)
+  margin: 1.5rem 0;
+  @include button(18rem,3rem,$button-color,#fff,1.2rem)
 }
 
 //for mobile screens
 @media screen and (max-width: 700px){
   .main{
+    margin-bottom: 14rem;
     height: 27rem;
   }
   .content{
@@ -61,7 +67,7 @@
   }
   .details{
     text-align: center;
-    padding: 1rem 1.3rem;
+    padding: 5rem 1.3rem 1rem;
   }
   .header{
     span{
@@ -88,7 +94,11 @@
     background-color: #ffffff;
     border: solid 2px #EFECE6;
     border-radius: 8px;
-    height: 18rem;
-    width: 16rem;
+    height: 23rem;
+    width: 18rem;
+  }
+  .add{
+    margin: 1rem 0;
+    @include button(15rem,2.5rem,$button-color,#fff,1.1rem)
   }
 }

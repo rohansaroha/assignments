@@ -13,25 +13,30 @@
   padding: 0 1rem;
 }
 .card{
-  width: 11rem !important;
+  width: 10rem !important;
   height: 8rem;
   margin: 0 1rem;
   padding: 1rem;
   border: solid 0.1rem #d3d1cb;
   background-color: #ffffff;
   border-radius: 8px;
+  display: flex !important;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   &:hover{
     box-shadow: 0.1rem 0.1rem #cdccca;
   }
 }
 .bHeader{
+  margin-bottom: 0.2rem;
   span{
     @include fontStyle(1.2rem,500,$text-color)
   }
 }
 .sHeader{
   span{
-    @include fontStyle(1rem,normal,$text-color)
+    @include fontStyle(1rem,normal,#7d7d7d)
   }
 }
 .qty{

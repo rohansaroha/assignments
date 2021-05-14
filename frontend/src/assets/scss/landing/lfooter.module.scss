@@ -12,31 +12,39 @@
   }
 }
 .cardContainer{
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap:2rem;
   padding: 0 $padding-vertical;
 }
 .card{
-  height: 12rem;
+  height: 10rem;
   box-sizing: border-box;
   width: 31%;
   padding: 1.25rem;
   border: solid 0.1rem #d3d1cb;
   background-color: #ffffff;
   border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   &:hover{
     box-shadow: 0.1rem 0.1rem #cdccca;
   }
 }
 .bHeader{
+  width: 60%;
+  margin-bottom: 0.2rem;
   span{
     @include fontStyle(1.2rem,500,$text-color)
   }
 }
 .sHeader{
   span{
-    @include fontStyle(1rem,normal,$text-color)
+    @include fontStyle(1rem,normal,#7d7d7d)
   }
 }
 .qty{

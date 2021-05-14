@@ -16,7 +16,7 @@ const LFooter = ()=>{
           <div style={{ display: "flex",justifyContent: "space-between" }}>
             <div className={styles.qty}><span>{book.qty}</span></div>
             <div className={styles.detailButton}>
-              {book.add ? (<div style={{ display: "flex" }}><LocalMallOutlinedIcon fontSize={"small"} color={"secondary"}/><span>Add</span></div>) : null}
+              {book.add ? (<div style={{ display: "flex" }}><LocalMallOutlinedIcon fontSize={"small"} style={{ color: "#3560b9",marginRight: "0.25rem" }}/><span>Add</span></div>) : null}
               <span>View Details</span>
             </div>
           </div>

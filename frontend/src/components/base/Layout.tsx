@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const Layout = ({ children }:{children:React.ReactNode})=>{
   return(
     <div className='layout-container'>
-      {/*<Navbar/>*/}
+      <Navbar/>
       <div className='layout-content-container'>
         {children}
       </div>
