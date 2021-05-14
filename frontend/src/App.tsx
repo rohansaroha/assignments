@@ -4,21 +4,23 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from "./pages/Landing";
 import theme from "./theme";
+import { OrderProvider } from "./hooks/OrderContext";
 
-function App() {
+const App = ()=> {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <div className="App">
-          <Switch>
-            <Route path='/' exact={true} component={Landing}/>
-          </Switch>
-        </div>
+        <OrderProvider>
+          <div className="App">
+            <Switch>
+              <Route path='/' exact={true} component={Landing}/>
+            </Switch>
+          </div>
+        </OrderProvider>
       </Router>
-
     </ThemeProvider>
 
   );
-}
+};
 
 export default App;

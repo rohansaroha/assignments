@@ -1,0 +1,94 @@
+@import "../styling.module";
+
+.main{
+  background-color: #FDEDD3;
+}
+.content{
+  padding: 5rem $padding-vertical;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.details{
+}
+.header{
+  margin-bottom: 0.7rem;
+  span{
+    @include fontStyle(3rem,500,#322f2a);
+  }
+}
+
+.pHeader{
+  margin: 0 0.5rem;
+  @include fontStyle(1rem,500,$text-color)
+}
+.sHeader{
+  @include fontStyle(0.9rem,normal,$text-color)
+}
+.text{
+  width: 58%;
+  span{
+    @include fontStyle(1.25rem,normal,#544f46);
+  }
+}
+.border{
+  @include border;
+}
+.card{
+  box-sizing: border-box;
+  padding: 2rem;
+  position: absolute;
+  right: $padding-vertical;
+  background-color: #ffffff;
+  border: solid 2px #EFECE6;
+  border-radius: 8px;
+  height: 24rem;
+  width: 20rem;
+}
+.add{
+  margin: 1rem 0;
+  @include button(15rem,2rem,#276ccc,#fff,1.2rem)
+}
+
+//for mobile screens
+@media screen and (max-width: 700px){
+  .main{
+    height: 27rem;
+  }
+  .content{
+    padding: 0;
+    display: initial;
+  }
+  .details{
+    text-align: center;
+    padding: 1rem 1.3rem;
+  }
+  .header{
+    span{
+      @include fontStyle(1.5rem,500,#322f2a);
+    }
+  }
+  .pHeader{
+
+  }
+  .sHeader{
+
+  }
+  .text{
+    width: 100%;
+    span{
+      @include fontStyle(1.25rem,normal,#544f46);
+    }
+  }
+  .card{
+    position: absolute;
+    padding: 1rem;
+    left: 50%;
+    transform: translateX(20%);
+    background-color: #ffffff;
+    border: solid 2px #EFECE6;
+    border-radius: 8px;
+    height: 18rem;
+    width: 16rem;
+  }
+}

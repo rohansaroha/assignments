@@ -1,0 +1,57 @@
+@import "../styling.module";
+
+.main{
+  background-color: $footer-background;
+  padding-bottom: 3rem;
+}
+.header{
+  span{
+    @include fontStyle(1rem,500,$text-color)
+  }
+}
+.cardContainer{
+  padding: 0 1rem;
+}
+.card{
+  width: 11rem !important;
+  height: 8rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  border: solid 0.1rem #d3d1cb;
+  background-color: #ffffff;
+  border-radius: 8px;
+  &:hover{
+    box-shadow: 0.1rem 0.1rem #cdccca;
+  }
+}
+.bHeader{
+  span{
+    @include fontStyle(1.2rem,500,$text-color)
+  }
+}
+.sHeader{
+  span{
+    @include fontStyle(1rem,normal,$text-color)
+  }
+}
+.qty{
+  span{
+    @include fontStyle(1rem,normal,green)
+  }
+}
+.detailButton{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+  span{
+    @include fontStyle(1rem,normal,$button-color)
+  }
+}
+
+.button{
+  cursor: pointer;
+  span{
+    @include fontStyle(0.8rem,normal,$button-color)
+  }
+}

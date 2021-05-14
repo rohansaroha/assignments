@@ -1,13 +1,25 @@
-import React from "react";
-import Layout from "../components/Layout";
-import styles from "../assets/scss/styling.module.scss";
+import React, { useEffect, useState } from "react";
+import Layout from "../components/base/Layout";
+import LHeader from "../components/landing/LHeader";
+import LAccordion from "../components/landing/LAccordion";
+import LFooter from "../components/landing/LFooter";
+import LFooterM from "../components/landing/LFooter.mobile";
 
 const Landing = () => {
+  const [width,setWidth] = useState(0);
+  let rawWidth;
+  useEffect(()=>{
+    rawWidth = screen.width;
+    if (rawWidth !== width){
+      setWidth(rawWidth);
+    }
+  },[width]);
   return (
     <Layout>
-      <div className={styles.header}>
-            hello
-      </div>
+      <LHeader/>
+      <LAccordion/>
+      {width > 800 ? (<LFooter/>) : (<LFooterM/>)}
+
     </Layout>
   );
 };

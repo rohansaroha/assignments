@@ -1,0 +1,41 @@
+@import "../styling.module";
+.custom-navbar {
+  font-family: $font-family;
+  &-brand {
+    a {
+      color: #FFF;
+      font-weight: bold;
+      font-size: 1.2rem;
+      &:hover {
+        text-decoration: none;
+        color: #FFF;
+      }
+    }
+  }
+  &-item {
+    color: #FFF;
+    a {
+      color: #FFF;
+      padding: 0 2rem;
+      font-size: 1.2rem;
+      &:hover {
+        text-decoration: none;
+        color: #007bb6;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom-navbar {
+    &-item {
+      a {
+        padding: 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .navbar-collapse {
+    background-color: green;
+  }
+}
